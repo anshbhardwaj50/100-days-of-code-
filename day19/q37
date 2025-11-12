@@ -1,0 +1,38 @@
+Q37: Write a program to find the LCM of two numbers.
+
+/*
+Sample Test Cases:
+Input 1:
+4 5
+Output 1:
+20
+
+Input 2:
+7 3
+Output 2:
+21
+
+*/
+
+source code:
+#include <stdio.h>
+
+int main() {
+    int a, b, i, lcm;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // The LCM of two numbers is the smallest number 
+    // that is perfectly divisible by both a and b
+    for (i = (a > b ? a : b); ; i++) {   // start from the greater number
+        if (i % a == 0 && i % b == 0) {
+            lcm = i;
+            break;
+        }
+    }
+
+    printf("LCM = %d\n", lcm);
+
+    return 0;
+}
