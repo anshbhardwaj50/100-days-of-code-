@@ -1,0 +1,39 @@
+Q50: Write a program to print the following pattern:
+*****
+ ****
+  ***
+   **
+    *
+
+/*
+Sample Test Cases:
+Input 1:
+
+Output 1:
+*****
+ ****
+  ***
+   **
+    *
+
+Input 2:
+
+Output 2:
+Note: Spaces indicate indentation.
+
+*/
+source code 
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    for (i = 5; i >= 1; i--) {         // outer loop for rows
+        for (j = 1; j <= i; j++) {     // inner loop for columns
+            printf("*");
+        }
+        printf("\n"); // move to next line after each row
+    }
+
+    return 0;
+}
